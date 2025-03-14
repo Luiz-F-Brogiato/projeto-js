@@ -1,44 +1,36 @@
-/* 
-var numero1 = 1;
-var numero2 = "1";
+var nome = document.getElementById("nome");
+var profissao = document.getElementById("profissao");
+var botao = document.getElementById("botao");
 
-if (numero1 === numero2) {
-    console.log("Igual");
-} else {
-    console.log("Diferente")
-}
- */
+botao.addEventListener("click", function () {
+    if (nome.value == "") {
+        alert("Informe o nome!");
+        return;
+    } else if (nome.value.length < 3) {
+        alert("Informe o nome completo!");
+        return;
+    }
 
-/* 
-var botao = document.getElementById("botao")
+    if (profissao.value == "") {
+        alert("Informe a profissão!");
+        return;
+    } else if (profissao.value.length == "") {
+        alert("Informe a profissão!");
+        return;
+    }
 
-botao.addEventListener("Click", function () {
+    var usuario = new Usuario;
 
+    var cadastrar = usuario.cadastrar({
+        nome: nome.value,
+        profissao: profissao.value
+    });
+
+    if (cadastrar.erro) {
+        alert(cadastrar.msg);
+        return;
+    } else {
+        alert(cadastrar.msg);
+        // atualizar lista
+    }
 });
-
-console.log("Oi") */
-
-var nome = document.getElementById("#nome")
-var profissao = document.querySelector("#profissao")
-var botao = document.getElementById("#botao")
-
-botao.addEventListener("click", function (){
-
-    if(nome.value == "") {
-        console.log("Preenche esse bagui aí");
-        return;
-    }
-    if(profissao.value == "") {
-        console.log("Preenche esse bagui aí");
-        return;
-    }
-    if(nome.value.length < 3) {
-        alert("Nome pequeno demais!")
-        return;
-    }
-
-    console.log(nome.value);
-    console.log(profissao.value);
-    console.log("FINALIZAÇÃO");
-})
-
