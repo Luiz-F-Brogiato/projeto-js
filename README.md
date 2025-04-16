@@ -4,7 +4,7 @@
 
 ---
 
-## 📖 Descrição
+## 📖 Sobre
 
 Este projeto é um exercício prático focado em **lógica com JavaScript puro**, utilizando HTML e Tailwind CSS para a estrutura e estilo da interface.
 
