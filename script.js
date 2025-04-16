@@ -10,5 +10,8 @@ if (numero1 === numero2) {
  */
 
 
+var botao = document.getElementById("botao")
 
-var nome = "Luiz Fernando";
+botao.addEventListener("Click", function () {
+
+});
