@@ -18,9 +18,9 @@ botao.addEventListener("Click", function () {
 
 console.log("Oi") */
 
-var nome = document.getElementById("nome")
-var profissao = document.querySelector("profissao")
-var botao = document.getElementById("botao")
+var nome = document.getElementById("#nome")
+var profissao = document.querySelector("#profissao")
+var botao = document.getElementById("#botao")
 
 botao.addEventListener("click", function (){
 
@@ -28,6 +28,15 @@ botao.addEventListener("click", function (){
         console.log("Preenche esse bagui aí");
         return;
     }
+    if(profissao.value == "") {
+        console.log("Preenche esse bagui aí");
+        return;
+    }
+    if(nome.value.length < 3) {
+        alert("Nome pequeno demais!")
+        return;
+    }
+
     console.log(nome.value);
     console.log(profissao.value);
     console.log("FINAL");
