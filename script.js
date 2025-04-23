@@ -23,5 +23,12 @@ var profissao = document.querySelector("profissao")
 var botao = document.getElementById("botao")
 
 botao.addEventListener("click", function (){
-    console.log("Clicou")
+
+    if(nome.value == "") {
+        console.log("Preenche esse bagui aí");
+        return;
+    }
+    console.log(nome.value);
+    console.log(profissao.value);
+    console.log("FINAL");
 })
