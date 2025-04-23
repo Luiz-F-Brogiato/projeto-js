@@ -9,9 +9,19 @@ if (numero1 === numero2) {
 }
  */
 
-
+/* 
 var botao = document.getElementById("botao")
 
 botao.addEventListener("Click", function () {
 
 });
+
+console.log("Oi") */
+
+var nome = document.getElementById("nome")
+var profissao = document.querySelector("profissao")
+var botao = document.getElementById("botao")
+
+botao.addEventListener("click", function (){
+    console.log("Clicou")
+})
