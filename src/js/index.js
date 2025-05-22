@@ -7,13 +7,17 @@ const nomesCadastrados = ["Luiz", "Jose", "Ana", "Pedro", "Maria"];
             const val = document.getElementById('val');
             let third = document.getElementById('third');
 
-            if (nome === "" || passwrd === "") {
-                val.innerHTML = "Campos inválidos!";
-            } else {
-                val.innerHTML = "Campos válidos";
+                if (nome === "" || passwrd === "") {
+                    val.innerHTML = "Campos inválidos!";
+ 
+                    trocaCor('pas', 'name')
+
+                } else {
+                    val.innerHTML = "Campos válidos";
             }
              if (nome == "") {
                 val.innerHTML = "Escreva um nome!";
+                trocaCor('name')
             } 
 
             if (age >= 18) {
@@ -23,6 +27,7 @@ const nomesCadastrados = ["Luiz", "Jose", "Ana", "Pedro", "Maria"];
             }
             if (age == "") {
                 third.innerHTML = "Idade não cadastrada!"
+                  trocaCor('age')
             }
             nomeCadastrado(nome)
         }
@@ -36,6 +41,14 @@ const nomesCadastrados = ["Luiz", "Jose", "Ana", "Pedro", "Maria"];
                 vali.innerHTML = `O ${nome} não está cadastrado`;
             } 
             if (nome == ""){
-                vali.innerHTML = `Não há nomes cadastrados`;
+                vali.innerHTML = `Não há nomes cadastrados!`;
+                trocaCor()
             }
         }
+
+  function trocaCor(...ids) {
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.backgroundColor = '#FF4C4C';
+  });
+}

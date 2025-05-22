@@ -5,6 +5,7 @@ form {
         justify-content: center;
         margin: auto;
         background-color: #1E1E1E;
+        padding: 30px;
 
 }
 
@@ -12,6 +13,8 @@ input {
         padding: 15px;
         border-color: #3A3A3A;
         background-color: #B0B0B0;
+        color: black;
+        font-size: 1.5rem;
 
 }
 
@@ -20,6 +23,7 @@ button {
         background-color: #0F62FE;
         color: white;
         margin-top: 10%;
+        font-size: 1.5rem;
 }
 
 body {
@@ -28,6 +32,7 @@ body {
 }
 
 div {
+        
         color: #E0E0E0;
         font-family: arial;
         text-align: center;
@@ -35,4 +40,5 @@ div {
 
 p {
         padding: 2%;
+        font-size: 1.5rem;
 }
