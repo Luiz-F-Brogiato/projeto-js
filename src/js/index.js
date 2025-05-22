@@ -12,13 +12,18 @@ const nomesCadastrados = ["Luiz", "Jose", "Ana", "Pedro", "Maria"];
             } else {
                 val.innerHTML = "Campos válidos";
             }
+             if (nome == "") {
+                val.innerHTML = "Escreva um nome!";
+            } 
 
-            if (age >= 18 || age === "") {
+            if (age >= 18) {
                 third.innerHTML = "Você é maior de 18!";
             } else {
                 third.innerHTML = "Você é menor de 18!";
             }
-
+            if (age == "") {
+                third.innerHTML = "Idade não cadastrada!"
+            }
             nomeCadastrado(nome)
         }
 
@@ -29,5 +34,8 @@ const nomesCadastrados = ["Luiz", "Jose", "Ana", "Pedro", "Maria"];
                 vali.innerHTML = `O ${nome} está cadastrado`;
             } else {
                 vali.innerHTML = `O ${nome} não está cadastrado`;
+            } 
+            if (nome == ""){
+                vali.innerHTML = `Não há nomes cadastrados`;
             }
         }
